@@ -58,9 +58,9 @@ async def filter(client, message):
         if files:
             for file in files:
                 file_id = file.file_id
-                filename = f"[{get_size(file.file_size)}] {file.file_name}"
+                filename = f"[🎬{get_size(file.file_size)}] 📁{file.filecaption}"
                 btn.append(
-                    [InlineKeyboardButton(text=f"{filecaption}",callback_data=f"rubandurai#{file_id}")]
+                    [InlineKeyboardButton(text=f"{filename}",callback_data=f"rubandurai#{file_id}")]
                     )
         else:
             await client.send_sticker(chat_id=message.from_user.id, sticker='')
@@ -125,9 +125,9 @@ async def group(client, message):
         if files:
             for file in files:
                 file_id = file.file_id
-                filename = f"[{get_size(file.file_size)}] {file.file_name}"
+                filename = f"[🎬{get_size(file.file_size)}] 📁{file.filecaption}"
                 btn.append(
-                    [InlineKeyboardButton(text=f"{filecaption}", url=f"https://telegram.dog/{nyva}?start=rubandurai_-_-_-_{file_id}")]
+                    [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=rubandurai_-_-_-_{file_id}")]
                 )
         else:
             LuciferMoringstar=await client.send_message(
@@ -303,7 +303,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit(text=f"{ABOUT}".format(TUTORIAL), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 
-        elif query.data.startswith("pr0fess0r_99"):
+        elif query.data.startswith("rubandurai27"):
             ident, file_id = query.data.split("#")
             filedetails = await get_file_details(file_id)
             for files in filedetails:
