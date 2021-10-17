@@ -60,7 +60,7 @@ async def filter(client, message):
                 file_id = file.file_id
                 filename = f"[{get_size(file.file_size)}] {file.file_name}"
                 btn.append(
-                    [InlineKeyboardButton(text=f"{filecaption}",callback_data=f"pr0fess0r_99#{file_id}")]
+                    [InlineKeyboardButton(text=f"{filecaption}",callback_data=f"rubandurai#{file_id}")]
                     )
         else:
             await client.send_sticker(chat_id=message.from_user.id, sticker='')
@@ -127,7 +127,7 @@ async def group(client, message):
                 file_id = file.file_id
                 filename = f"[{get_size(file.file_size)}] {file.file_name}"
                 btn.append(
-                    [InlineKeyboardButton(text=f"{filecaption}", url=f"https://telegram.dog/{nyva}?start=pr0fess0r_99_-_-_-_{file_id}")]
+                    [InlineKeyboardButton(text=f"{filecaption}", url=f"https://telegram.dog/{nyva}?start=rubandurai_-_-_-_{file_id}")]
                 )
         else:
             LuciferMoringstar=await client.send_message(
