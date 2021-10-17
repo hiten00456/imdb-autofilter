@@ -60,7 +60,7 @@ async def filter(client, message):
                 file_id = file.file_id
                 filename = f"🎬[{get_size(file.file_size)}] 📁{file.file_name}"
                 btn.append(
-                    [InlineKeyboardButton(text=f"{filename}",callback_data=f"rubandurai#{file_id}")]
+                    [InlineKeyboardButton(text=f"{filename}",callback_data=f"pr0fess0r_99#{file_id}")]
                     )
         else:
             await client.send_sticker(chat_id=message.from_user.id, sticker='')
@@ -127,7 +127,7 @@ async def group(client, message):
                 file_id = file.file_id
                 filename = f"🎬[{get_size(file.file_size)}] 📁{file.filename}"
                 btn.append(
-                    [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=rubandurai_-_-_-_{file_id}")]
+                    [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=pr0fess0r_99_-_-_-_{file_id}")]
                 )
         else:
             LuciferMoringstar=await client.send_message(
@@ -136,7 +136,7 @@ async def group(client, message):
 👋Hey {message.from_user.mention}
 If this movie is not in our database you will not get that movie..
 Otherwise, the spelling of the name of the requested movie may not be correct...
-So you go to google and check the spelling of the name of the movie you want.""",
+So you go to [Google](google.com) and check the spelling of the name of the movie you want.\n @TN_linkZz""",
             parse_mode="html",
             reply_to_message_id=message.message_id
         )
@@ -303,7 +303,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit(text=f"{ABOUT}".format(TUTORIAL), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 
-        elif query.data.startswith("rubandurai27"):
+        elif query.data.startswith("pr0fess0r_99"):
             ident, file_id = query.data.split("#")
             filedetails = await get_file_details(file_id)
             for files in filedetails:
