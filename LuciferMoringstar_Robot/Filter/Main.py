@@ -351,7 +351,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{title}"
                 buttons = [
                     [
-                        InlineKeyboardButton('Main Channel', url="t.me/tn_linkZz)
+                        InlineKeyboardButton('Main Channel', url="t.me/tn_linkZz")
                     ]
                     ]
                 
