@@ -129,15 +129,7 @@ async def group(client, message):
                 btn.append(
                     [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=pr0fess0r_99_-_-_-_{file_id}")]
                 )
-        else:
-            LuciferMoringstar=await client.send_message(
-            chat_id = message.chat.id,
-            text=f"""
-👋Hey {message.from_user.mention}
-If this movie is not in our database you will not get that movie..
-Otherwise, the spelling of the name of the requested movie may not be correct...
-So you go to google and check the spelling of the name of the movie you want.""",
-            parse_mode="html",
+                    parse_mode="html",
             reply_to_message_id=message.message_id
         )
             return
